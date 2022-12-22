@@ -24,21 +24,24 @@ The score improved from 2.18 to 1.57. Splitting the temperature and setting some
 ### How much better did your model preform after trying different hyper parameters?
 After three rounds of hyperparameter tuning, the kaggle score didn't change significantly - it always stayed in the range of 1.57. Also adding more time didn't add much. The auto_stack=true automatically set two other hyperparameters according to the data, but also that didn't change much in the overall results.
 
+According to the submission feedback, I added individual hyperparameters for some algorithms as a 4th option. This is included in the last trained model, saved as hpo4. This did actually improve the kaggle score a little bit to 1.51660.
+
 ### If you were given more time with this dataset, where do you think you would spend more time?
 Would check the best performing classifier and see if there is anything to optimize for that one.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 Not sure what is expected in this table - initial and add_feature didn't modify any 3 hyperparamters.
-Did three runs with adding more tuned hyperparameters (hpo1, hpo2, hpo3)
+Did three runs with adding more tuned hyperparameters (hpo1, hpo2, hpo3, hpo4)
 Added the kaggle score in the last column.
 
-|model|hpo1|hpo2|hpo3|score|
+|model|hpo1|hpo2|hpo3|hpo4|score|
 |--|--|--|--|--|
-|initial|N/A|N/A|N/A|2.18289|
-|add_features|N/A|N/A|N/A|1.56982|
-|hpo1|auto_stack=true|||1.57219|
-|hpo2|auto_stack=true|num_bag_sets=3||1.57205|
-|hpo3|auto_stack=true|num_bag_sets=3|time_limit=1000|1.57656|
+|initial|N/A|N/A|N/A|N/A|2.18289|
+|add_features|N/A|N/A|N/A|N/A|1.56982|
+|hpo1|auto_stack=true||||1.57219|
+|hpo2|auto_stack=true|num_bag_sets=3|||1.57205|
+|hpo3|auto_stack=true|num_bag_sets=3|time_limit=1000||1.57656|
+|hpo3|auto_stack=true|individual model hyperparams|||1.51660|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
