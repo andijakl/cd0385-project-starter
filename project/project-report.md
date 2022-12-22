@@ -35,7 +35,7 @@ Did three runs with adding more tuned hyperparameters (hpo1, hpo2, hpo3, hpo4)
 Added the kaggle score in the last column.
 
 |model|hpo1|hpo2|hpo3|hpo4|score|
-|--|--|--|--|--|
+|--|--|--|--|--|--|
 |initial|N/A|N/A|N/A|N/A|2.18289|
 |add_features|N/A|N/A|N/A|N/A|1.56982|
 |hpo1|auto_stack=true||||1.57219|
